@@ -1,0 +1,226 @@
+:root{
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --ink: #14213d;
+    --muted: #5c6b87;
+    --brand: #2563eb;
+    --brand-ink: #0b3ea3;
+    --accent: #e0ecff;
+    --card: #fafcff;
+    --border: #dbe5f4;
+    --shadow: 0 10px 30px rgba(20, 33, 61, 0.08);
+  }
+  
+  *,
+  *::before,
+  *::after { box-sizing: border-box; }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--bg), #eef3fb 60%);
+  }
+  
+  /* Containers keep content readable on large screens */
+  .container {
+    width: min(1100px, 92vw);
+    margin-inline: auto;
+    padding: 16px;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    margin: 0 0 8px;
+    line-height: 1.25;
+  }
+  
+  p { margin: 0 0 12px; }
+  
+  .section-title {
+    font-size: clamp(1.15rem, 1rem + 0.8vw, 1.5rem);
+    margin-bottom: 8px;
+  }
+  
+  .muted { color: var(--muted); }
+  
+  .site-header {
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+    letter-spacing: .5px;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 8px 0 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--brand);
+    padding: 8px 10px;         
+    border-radius: 8px;
+    border: 1px solid transparent;
+  }
+  
+  .nav a:hover,
+  .nav a:focus {
+    background: var(--accent);
+    border-color: var(--border);
+    outline: none;
+  }
+  
+  .hero {
+    background: radial-gradient(1200px 300px at 20% -20%, #eaf1ff 20%, transparent 60%),
+                linear-gradient(180deg, #fafdff, #eef6ff);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-content {
+    padding: 40px 0;             
+  }
+  .hero h2 {
+    font-size: clamp(1.4rem, 1rem + 2vw, 2rem);
+    margin-bottom: 8px;
+  }
+  .actions { display: flex; gap: 10px; margin-top: 12px; }
+  
+  .btn {
+    background: var(--brand);
+    color: #fff;
+    border: 1px solid var(--brand);
+    padding: 10px 14px;          
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+  }
+  .btn:hover,
+  .btn:focus {
+    background: var(--brand-ink);
+    border-color: var(--brand-ink);
+    outline: none;
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+  }
+  .btn-small { padding: 8px 12px; font-weight: 600; }
+  
+  .features { padding: 28px 0 8px; }
+  
+  .card-grid {
+    display: grid;              
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;                   
+    margin-top: 10px;
+  }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);  
+    border-radius: 12px;
+    padding: 16px;               
+    box-shadow: var(--shadow);
+  }
+  
+  .card h4 { margin-bottom: 6px; }
+  
+  .box-lab { padding: 28px 0 36px; }
+  
+  .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 10px;
+  }
+  
+  .demo {
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 12px;
+  }
+  
+  .demo h5 { margin-bottom: 8px; }
+  
+  .box {
+    width: 100%;
+    min-height: 120px;
+    position: relative;
+    background: #f2f7ff;           /* background shows the box boundary */
+    border-radius: 10px;
+    border: 2px solid #c9dafc;     /* border contributes to box size (with border-box it’s included) */
+  }
+  
+  /* Padding-focused demo */
+  .padding-demo { padding: 24px; }
+  
+  /* Border-focused demo */
+  .border-demo { border-width: 6px; }
+  
+  /* Margin-focused demo */
+  .margin-demo { margin: 24px 0; }  /* margin adds space outside the box */
+  
+  .content {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #0ea5e9;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+  }
+  
+  .note { color: var(--muted); font-size: 0.95rem; margin-top: 8px; }
+  
+  .tip {
+    margin-top: 12px;
+    background: #eef6ff;
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 900px) {
+    .card-grid,
+    .lab-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .nav { gap: 6px; }
+    .card-grid,
+    .lab-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-content { padding: 28px 0; }
+  }
+  

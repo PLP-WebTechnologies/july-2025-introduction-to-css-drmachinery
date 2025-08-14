@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Box Model & Basic Styling Demo</title>
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Styling</h1>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#box-lab">Box Model Lab</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Pure CSS. Clear Spacing. Clean Layout.</h2>
+          <p>
+            This small site demonstrates linking an external stylesheet, using common properties
+            (<code>color</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>,
+            <code>border</code>, <code>background</code>), and how the CSS Box Model affects sizing.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#features">Explore Features</a>
+            <a class="btn btn-outline" href="#box-lab">Try the Box Lab</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / CARDS -->
+    <section id="features" class="features">
+      <div class="container">
+        <h3 class="section-title">Core Styling Examples</h3>
+        <div class="card-grid">
+          <article class="card">
+            <h4>Typography</h4>
+            <p>
+              Headings, paragraphs, and links are styled with consistent font sizing, color,
+              and spacing for readability.
+            </p>
+            <a class="btn btn-small" href="#hero">See in Hero</a>
+          </article>
+
+          <article class="card">
+            <h4>Layout & Spacing</h4>
+            <p>
+              The grid and containers use padding for inner space and margins to separate blocks.
+              Borders and background colors make box boundaries visible.
+            </p>
+            <a class="btn btn-small" href="#box-lab">Open Box Lab</a>
+          </article>
+
+          <article class="card">
+            <h4>Buttons</h4>
+            <p>
+              Buttons show hover and focus states, with clear hit areas using padding and border-radius.
+            </p>
+            <button class="btn btn-small" type="button" aria-label="Example button">Click Example</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOX MODEL LAB -->
+    <section id="box-lab" class="box-lab">
+      <div class="container">
+        <h3 class="section-title">Box Model Lab</h3>
+        <p class="muted">
+          Each demo box has the same declared width, but different <strong>padding</strong>,
+          <strong>border</strong>, and <strong>margin</strong>. Note how space inside and outside the box changes.
+        </p>
+
+        <div class="lab-grid">
+          <!-- Padding Demo -->
+          <div class="demo">
+            <h5>Padding Emphasis</h5>
+            <div class="box padding-demo">
+              <span class="badge">padding: 24px</span>
+              <div class="content">Inner content area</div>
+            </div>
+            <p class="note">Padding adds space <em>inside</em> the border.</p>
+          </div>
+
+          <!-- Border Demo -->
+          <div class="demo">
+            <h5>Border Emphasis</h5>
+            <div class="box border-demo">
+              <span class="badge">border: 6px solid</span>
+              <div class="content">Inner content area</div>
+            </div>
+            <p class="note">Borders add to the visual edge of the element.</p>
+          </div>
+
+          <!-- Margin Demo -->
+          <div class="demo">
+            <h5>Margin Emphasis</h5>
+            <div class="box margin-demo">
+              <span class="badge">margin: 24px</span>
+              <div class="content">Inner content area</div>
+            </div>
+            <p class="note">Margins create space <em>outside</em> the element.</p>
+          </div>
+        </div>
+
+        <aside class="tip">
+          <strong>Tip:</strong> This page uses <code>box-sizing: border-box;</code> globally so padding
+          and borders are included in the element’s declared width.
+        </aside>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
